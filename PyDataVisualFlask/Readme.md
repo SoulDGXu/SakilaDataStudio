@@ -4,21 +4,21 @@
 
 Sakila的ER图如下：
 
-![Sakila EER Diagram](.\images\Sakila EER Diagram.png)
+![Sakila EER Diagram](./images/Sakila EER Diagram.png)
 
 Sakila的业务理解，影片租赁业务的业务活动主要包括租赁活动、支付活动和归还活动。如下图：
 
-![数据主题](.\images\数据主题.png)
+![数据主题](./images/数据主题.png)
 
 本文是结合Sakila的6个案例，基于 PyEcharts + Flask + Bootstrap，采用前后端分离模式，生成一个完整的数据可视化系统。本节内容的知识结构如下图所示：
 
-![章节知识结构](.\images\章节知识结构.png)
+![章节知识结构](./images/章节知识结构.png)
 
 ## 1. 运行演示
 
 PyEcharts 与 Flask 框架整合以后，结合前面6个实战案例，可以整合出一个完整的数据可视化系统。系统运行以后的效果如下图所示：
 
-![运行演示](.\images\运行演示.gif)
+![运行演示](./images/运行演示.gif)
 
 动图分别呈现了实时指标监控、历史数据变化趋势、客户地理位置分布、订单商品构成模型、门店盈利能力对比和门店多维竞争优势。我们通过一个页面导航的方式，把它们组织在一起，形成了一个完整的数据可视化系统。
 
@@ -26,7 +26,7 @@ PyEcharts 与 Flask 框架整合以后，结合前面6个实战案例，可以�
 
 数据可视化分析系统的开发过程，采用前后端分离的开发模式，融合前面的 6 个实战案例。其完整的源码结构如下图所示：
 
-![数据可视化系统源码结构](.\images\数据可视化系统源码结构.png)
+![数据可视化系统源码结构](./images/数据可视化系统源码结构.png)
 
 如上图所示，整个数据可视化系统的源码位于PyDataVisualFlask 项目下，文件夹包括：apps、data、model、static 和  templates。
 
@@ -42,7 +42,7 @@ PyEcharts 与 Flask 框架整合以后，结合前面6个实战案例，可以�
 
 完成一个图表页面的开发之后，我们会重新回到前端页面设计环节，通过循环实现新的图表页面。数据可视化系统完整的开发流程，如下图所示：
 
-![数据可视化系统开发流程](.\images\数据可视化系统开发流程.png)
+![数据可视化系统开发流程](./images/数据可视化系统开发流程.png)
 
 1. **创建项目**：创建一个 Flask 项目，并且创建相应的文件目录结构。
 2. **模板复制**：复制 PyEcharts 的模板文件到 Flask 项目的 templates 文件夹。
@@ -68,7 +68,7 @@ PyEcharts 与 Flask 框架整合以后，结合前面6个实战案例，可以�
 
 创建项目完成后的文件结构如下所示：
 
-![创建空白项目](.\images\创建空白项目.png)
+![创建空白项目](./images/创建空白项目.png)
 
 ## 2. 复制模板
 
@@ -78,14 +78,14 @@ PyEcharts 与 Flask 框架整合以后，结合前面6个实战案例，可以�
 
    1. 查找 PyEcharts 模板文件的路径，可以通过 pip show pyecharts 指令，查询其安装位置。具体的操作指令执行界面如下图所示：
 
-      ![PyEcharts 安装目录查询](.\images\PyEcharts 安装目录查询.png)
+      ![PyEcharts 安装目录查询](./images/PyEcharts 安装目录查询.png)
 
    2. PyEcharts 的安装目录位于：D:\XuProgramFiles\Anaconda3\Lib\site-packages，在该目录下找到pyecharts文件夹下的templates文件夹，如下所示：
 
-      ![PyEcharts 模板文件](.\images\PyEcharts 模板文件.png)
+      ![PyEcharts 模板文件](./images/PyEcharts 模板文件.png)
 
 2. 复制 PyEcharts 模板文件到 Flask 空白项目（这里是PyDataVisualFlask ）的 templates 文件夹。复制后的目录结构如下图所示：
-   ![项目模板文件](.\images\项目模板文件.png)
+   ![项目模板文件](./images/项目模板文件.png)
 
 ## 3. 前端页面设计
 
@@ -93,7 +93,7 @@ PyEcharts 与 Flask 框架整合以后，结合前面6个实战案例，可以�
 
 构建基于网页的 Web 类应用系统，一般要求有美观的界面，主题分明的配色方案，清晰明了的内容组织，这样能带来良好的用户体验。通常会首选免费开源的主题模板，主题模板定义了页面的组件元素、样式和配色。本案例中，选择 Bootstrap 的主题样式模板：[Matrix Admin](https://www.matrixadmin.wrappixel.com/) 开源免费版本。其官方网站如下图所示：
 
-![Bootstrap 主题样式文件](.\images\Bootstrap 主题样式文件.png)
+![Bootstrap 主题样式文件](./images/Bootstrap 主题样式文件.png)
 
 Matrix Admin 分为开源版本和商业版本，开源版本的下载地址为：[http://matrixadmin.wrappixel.com/matrix-admin-package-full.zip](http://matrixadmin.wrappixel.com/matrix-admin-package-full.zip)。下载后得到matrix-admin-package-full.zip，依次解压得到matrix-admin-bt4文件。
 
@@ -107,7 +107,7 @@ Matrix Admin 分为开源版本和商业版本，开源版本的下载地址为�
 
 Matrix Admin 文件解压以后的目录结构如下图所示：
 
-![Matrix Admin 文件目录结构](.\images\Matrix Admin 文件目录结构.png)
+![Matrix Admin 文件目录结构](./images/Matrix Admin 文件目录结构.png)
 
 Matrix Admin 的文件目录，共分为 3 个文件夹：asserts、dist 和 html。
 
@@ -117,7 +117,7 @@ Matrix Admin 的文件目录，共分为 3 个文件夹：asserts、dist 和 htm
 
 Matrix Admin 示例程序可以直接通过浏览器查看，运行效果如下：
 
-![Matrix Admin 运行演示](.\images\Matrix Admin 运行演示.png)
+![Matrix Admin 运行演示](./images/Matrix Admin 运行演示.png)
 
 上述示例程序展现了该主题模板支持的页面元素、配色方案和主题样式。我们可以通过复用其页面元素、配色方案和主题样式，结合 PyEcharts 图表设置，设计我们自己的数据可视化系统。
 
@@ -127,7 +127,7 @@ Matrix Admin 示例程序可以直接通过浏览器查看，运行效果如下�
 
 数据可视化系统中，按照图表类型组织内容，除实时监控数据指标卡外，一个图表类型对应一个业务场景。设计完成之后的页面导航栏，如下图所示：
 
-![数据可视化页面导航栏](.\images\数据可视化页面导航栏.png)
+![数据可视化页面导航栏](./images/数据可视化页面导航栏.png)
 
 具体操作：
 
@@ -137,7 +137,7 @@ Matrix Admin 示例程序可以直接通过浏览器查看，运行效果如下�
 
 3. 修改index.html源码里页面元素组件Sidebar navigation：`<div class="scroll-sidebar">...</div>`.即声明一个页面导航栏，共包括 6 个导航菜单项，每一个导航菜单项有相应的主题样式、超级链接地址、菜单标题和折叠状态。源码如下：
 
-   ![导航栏页面实现源码](.\images\导航栏页面实现源码.png)
+   ![导航栏页面实现源码](./images/导航栏页面实现源码.png)
 
 ### 3.3 图表元素设计
 
@@ -244,7 +244,7 @@ Matrix Admin 示例程序可以直接通过浏览器查看，运行效果如下�
 
 如下图所示：
 
-![服务接口类型](.\images\服务接口类型.png)
+![服务接口类型](./images/服务接口类型.png)
 
 #### 4.1.1 页面请求设计
 
@@ -371,7 +371,7 @@ def error(e):
 
 上述程序中，我们通过在函数声明前添加装饰器的调用，实现了对于异常错误码的捕获，并且绑定了相应的异常处理函数。当对应错误码的网络访问异常发生时，会调用对应的异常处理函数，渲染对应的异常提示页面。一个自定义的异常提示页面如下图所示：
 
-![自定义异常处理](.\images\自定义异常处理.png)
+![自定义异常处理](./images/自定义异常处理.png)
 
 ## 5. 前后端联调
 
@@ -379,19 +379,19 @@ def error(e):
 
 增加前端页面中导航侧边菜单栏的各个跳转页面，与后台应用的页面渲染统一，更新超链接地址。
 
-![index页面](.\images\index页面.png)
+![index页面](./images/index页面.png)
 
 修改templates内的6个index.html模板文件的可视化图表组件：
 
-![index2页面](.\images\index2页面.png)
+![index2页面](./images/index2页面.png)
 
-![index3页面](.\images\index3页面.png)
+![index3页面](./images/index3页面.png)
 
-![index4页面](.\images\index4页面.png)
+![index4页面](./images/index4页面.png)
 
-![index5页面](.\images\index5页面.png)
+![index5页面](./images/index5页面.png)
 
-![index6页面](.\images\index6页面.png)
+![index6页面](./images/index6页面.png)
 
 ## 6.其他问题
 
@@ -399,9 +399,9 @@ def error(e):
 
 将主题模板内的2个文件夹assets和dist加入ststi文件夹，并修改相应的CSS设计文件。例如：
 
-1. 对".\images\PyDataVisualFlask\static\assets\libs\flot\css\float-chart.css"文件进行修改：图表可视化组件的高度修改为800px。
+1. 对"./images/PyDataVisualFlask\static\assets\libs\flot\css\float-chart.css"文件进行修改：图表可视化组件的高度修改为800px。
 
-   ![CSS修改1](.\images\CSS修改1.png)
+   ![CSS修改1](./images/CSS修改1.png)
 
 2. 修改LOGO图片等。
 
@@ -409,11 +409,11 @@ def error(e):
 
 对于客户地理位置分布的地形图无法显示，只显示了图例项。如下图所示：
 
-![Map 地图无法显示](.\images\Map 地图无法显示.png)
+![Map 地图无法显示](./images/Map 地图无法显示.png)
 
 解决：查看模板文件index4.html里有没有引用ECharts的Map类图的JS代码。发现原来没有添加地图类型为world的JS源码，即`<script type="text/javascript" src="https://assets.pyecharts.org/assets/maps/world.js"></script>`。
 
-![Map 地图无法显示-代码溯源](.\images\Map 地图无法显示-代码溯源.png)
+![Map 地图无法显示-代码溯源](./images/Map 地图无法显示-代码溯源.png)
 
 添加地图类型为world的JS源码资源后，地图可以正常显示。
 
