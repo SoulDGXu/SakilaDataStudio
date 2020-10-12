@@ -14,3 +14,6 @@ case_6: 案例6-竞争优势多维分析
 
 PyDataVisualFlask: Sakila-PyEcharts & Flask集成案例
 
+flask_demo_1: 数据发布-Flask Web框架基础
+
+flask_demo_2: 数据发布-PyEcharts & Flask框架集成（框架整合模式、页面刷新机制）
